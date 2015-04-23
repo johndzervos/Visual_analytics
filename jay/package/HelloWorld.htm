@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+    <title>Sulaiman's Lab</title>
+
+    <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+	<script type="text/javascript">
+
+	    yyyy = 1990;
+
+	    $(function () {
+	        $('#slider').slider({
+                    min: 1990,
+		            max: 2010,
+
+		            slide: function (event, ui) {
+		                yyyy = ui.value;
+		                $("#msg").html("Year: " + yyyy);
+		            }
+		     });
+		});
+    </script>
+    <script type="text/javascript" src="./d3.js"></script>
+    <script type="text/javascript" src="./d3.layout.js"></script>
+    
+</head>
+<body>
+
+<p id="msg">Please click the button.</p>
+
+<button id="btn" type="button">Button</button>
+
+<div id="slider"></div>
+
+<br />
+
+<div id="chart"></div>
+
+
+<script type="text/javascript">
+
+    $("#btn").on("click", function () {
+
+        
+
+        $("svg").remove();
+
+        $.getScript('bubble.js');
+
+    });
+
+    $("#btn_resent").on("click", function () {
+        
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Bank Centers.kml</name>
+	<visibility>1</visibility>
+	<open>1</open>
+	<Style id="sh_target">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<scale>9.45454</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/target.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_realestate">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_realestate</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_realestate</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_realestate">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<scale>8</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/realestate.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_target">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_target</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_target</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_realestate">
+		<IconStyle>
+			<color>ff00ffff</color>
+			<scale>9.45454</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/realestate.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_target">
+		<IconStyle>
+			<color>ff0000ff</color>
+			<scale>8</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/target.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Bank Centers</name>
+		<visibility>1</visibility>
+		<open>1</open>
+		<Folder>
+			<name>Data Centers</name>
+			<visibility>1</visibility>
+			<Placemark>
+				<name>Data Center</name>
+				<visibility>1</visibility>
+				<styleUrl>#msn_target</styleUrl>
+				<Point>
+					<coordinates>-101.1988307015633,31.06514427071623,1000</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Data Center</name>
+				<visibility>1</visibility>
+				<styleUrl>#msn_target</styleUrl>
+				<Point>
+					<coordinates>-144.7927409811527,36.03496231160826,1</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Data Center</name>
+				<visibility>1</visibility>
+				<styleUrl>#msn_target</styleUrl>
+				<Point>
+					<coordinates>-122.5632977377749,-14.54241549107048,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Data Center</name>
+				<visibility>1</visibility>
+				<styleUrl>#msn_target</styleUrl>
+				<Point>
+					<coordinates>-70.41285490045435,0.951054642854049,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Data Center</name>
+				<visibility>1</visibility>
+				<styleUrl>#msn_target</styleUrl>
+				<Point>
+					<coordinates>-100.5573370014041,66.63569791116203,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Placemark>
+			<name>HQ</name>
+			<visibility>1</visibility>
+			<styleUrl>#msn_realestate</styleUrl>
+			<Point>
+				<coordinates>-70.25979476999538,0.8173707995821654,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

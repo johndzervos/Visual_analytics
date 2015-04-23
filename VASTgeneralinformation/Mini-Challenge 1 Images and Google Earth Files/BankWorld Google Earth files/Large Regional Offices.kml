@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Large Regional Offices.kml</name>
+	<open>1</open>
+	<StyleMap id="msn_large_building1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_large_building1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_large_building00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_large_building00">
+		<IconStyle>
+			<scale>4.40404</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_large_building0">
+		<IconStyle>
+			<scale>4</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_large_building3">
+		<IconStyle>
+			<scale>4.40404</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_large_building1">
+		<IconStyle>
+			<scale>4</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_large_building4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_large_building3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_large_building3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_large_building4">
+		<IconStyle>
+			<scale>4</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_large_building2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_large_building</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_large_building</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_large_building0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_large_building0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_large_building0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_large_building3">
+		<IconStyle>
+			<scale>4</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_large_building">
+		<IconStyle>
+			<scale>4.40404</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_large_building2">
+		<IconStyle>
+			<scale>4</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_large_building">
+		<IconStyle>
+			<scale>4</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_large_building2">
+		<IconStyle>
+			<scale>4.40404</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_large_building0">
+		<IconStyle>
+			<scale>4.40404</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_large_building3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_large_building4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_large_building1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_large_building">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_large_building2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_large_building2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_large_building1">
+		<IconStyle>
+			<scale>4.40404</scale>
+			<Icon>
+				<href>large_building.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Large Regional Offices</name>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-86.05850498135686</longitude>
+				<latitude>27.99121082787241</latitude>
+				<altitude>0</altitude>
+				<heading>20.17041908142684</heading>
+				<tilt>0</tilt>
+				<range>11406690.88709612</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building1</styleUrl>
+			<Point>
+				<coordinates>-97.40272375039905,19.48002848692576,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-73.97955016027714</longitude>
+				<latitude>40.04510065654019</latitude>
+				<altitude>0</altitude>
+				<heading>5.376830814738568</heading>
+				<tilt>0</tilt>
+				<range>7263030.303267064</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building2</styleUrl>
+			<Point>
+				<coordinates>-101.3420123155663,49.33603314884618,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-135.6283396993444</longitude>
+				<latitude>22.7653990941664</latitude>
+				<altitude>0</altitude>
+				<heading>8.497907610600244</heading>
+				<tilt>0</tilt>
+				<range>11409764.51841053</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building0</styleUrl>
+			<Point>
+				<coordinates>-137.7500044242961,41.20165243955286,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-123.5606289870625</longitude>
+				<latitude>-1.238790697429431</latitude>
+				<altitude>0</altitude>
+				<heading>6.522313755635402</heading>
+				<tilt>0</tilt>
+				<range>9393260.157816656</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building0</styleUrl>
+			<Point>
+				<coordinates>-111.5212094998253,-2.359323296884148,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-54.3793464639813</longitude>
+				<latitude>25.2420033285078</latitude>
+				<altitude>0</altitude>
+				<heading>-3.170273087966766</heading>
+				<tilt>0</tilt>
+				<range>9406902.487956889</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building1</styleUrl>
+			<Point>
+				<coordinates>-61.23253343535969,31.44595878870201,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-127.6676336588551</longitude>
+				<latitude>-6.229618958816483</latitude>
+				<altitude>0</altitude>
+				<heading>-7.940873448166475</heading>
+				<tilt>0</tilt>
+				<range>9402029.801971035</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building1</styleUrl>
+			<Point>
+				<coordinates>-123.3698781311602,-6.693648326018169,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-135.6283396993444</longitude>
+				<latitude>22.7653990941664</latitude>
+				<altitude>0</altitude>
+				<heading>8.497907610600244</heading>
+				<tilt>0</tilt>
+				<range>11409764.51841053</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building0</styleUrl>
+			<Point>
+				<coordinates>-148.8731942648317,25.33158368018485,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-110.4199705058903</longitude>
+				<latitude>29.16284748147699</latitude>
+				<altitude>0</altitude>
+				<heading>10.10894930496095</heading>
+				<tilt>0</tilt>
+				<range>6008661.258075556</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building</styleUrl>
+			<Point>
+				<coordinates>-113.022938441903,32.78321961100793,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-74.1895835564991</longitude>
+				<latitude>12.89373771899439</latitude>
+				<altitude>0</altitude>
+				<heading>15.55051284771304</heading>
+				<tilt>0</tilt>
+				<range>7270261.113931328</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building4</styleUrl>
+			<Point>
+				<coordinates>-72.58851628062855,5.651785906340306,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Untitled Placemark</name>
+						<LookAt>
+				<longitude>-84.50053405558256</longitude>
+				<latitude>21.86095351373286</latitude>
+				<altitude>0</altitude>
+				<heading>1.000604021503283e-007</heading>
+				<tilt>0</tilt>
+				<range>4436660.435131853</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_large_building3</styleUrl>
+			<Point>
+				<coordinates>-79.39538459589942,24.16080509434521,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Mercator Projection</title>
+    <script type="text/javascript" src="../../d3.js"></script>
+	<script src="http://mbostock.github.com/d3/d3.v2.js?2.8.1"></script>
+    <script type="text/javascript" src="../../d3.geom.js"></script>
+    <script type="text/javascript" src="../../d3.layout.js"></script>
+	<script type="text/javascript" src="../../d3.csv.js"></script>
+    <script type="text/javascript" src="../../d3.geo.js"></script>
+    <script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../lib/jquery-ui/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+
+	    yyyy = 1990;
+
+	    $(function () {
+	        $('#slider').slider({
+                    min: 1990,
+		            max: 2010,
+
+		            slide: function (event, ui) {
+		                yyyy = ui.value;
+		                $("#msg").html("Year: " + yyyy);
+		            }
+		     });
+		});
+    </script>
+    <style type="text/css">
+
+@import url("../../lib/jquery-ui/jquery-ui.css");
+
+
+
+#slider { 
+	margin: 100px; 
+	width: 200px;
+
+}
+#states1 path {
+  fill: lightgrey;
+  stroke: #fff;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <h3>World Bank </h3>
+	
+	
+	  <div class="styled-select" 'grid_4_in'>
+<div id="slider"></div>
+  </div>
+	
+	
+    <script type="text/javascript">
+
+// Our projection.
+var width = 1200,
+    height = 800,
+    centered;
+
+var projection = d3.geo.equirectangular()
+    .scale(2500)
+    .translate([530, 130]);
+
+
+    path = d3.geo.path()
+	.projection(projection);
+	
+    
+var svg = d3.select("body")
+  .append("svg:svg")
+  .attr("width", width)
+  .attr("height", height);
+  
+
+	  svg.append("rect")
+    //.attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+	.attr("fill", "none" )
+	.on("click", click);
+	
+ var states = svg.append("g")
+    .attr("transform", "translate(" + width/2  + "," + height/2  + ")")
+    .append("g")
+    .attr("class", "white")
+	.attr("fill", "grey" )
+    .attr("id", "states");
+
+ 
+d3.json("world-bank-countries.json", function(collection) {
+
+  states
+     .append("svg:g")
+     .selectAll("path")
+     .data(collection.features)
+     .enter().append("svg:path")
+     .attr("d", path)
+     .on("click", click)
+     .append("title")
+     .text(function(d) { return d.properties.name; }); 
+var csv_chosen_file="2012-02-02 09_15_00.csv";
+
+d3.csv(csv_chosen_file, function(data) { 
+    /* Read CSV file: first row =>  tkey,ipaddr,healthtime,numconnections,policystatus,activityflag,latitude,longitude */
+    var sampsize = 0;
+    var val_array = new Array();
+
+    sampsize = data.length;
+   //Parsing values to an array
+    for (var i=0; i < sampsize; i++) {
+   
+       val_array[i] = { size: Math.ceil(parseFloat(data[i].numconnections_avg)),color : (parseFloat(data[i].policystatus_avg)), type:Math.ceil(data[i].activityflag_avg), y: parseFloat(data[i].latitude), x: parseFloat(data[i].longitude)  };
+     }
+
+		dotsEnter = states
+		        .append("svg:g")
+		        .selectAll("path")
+				.data(val_array)
+				.enter().append("path")
+				.sort(function(a,b) { /*console.log(a);*/ return  b.size - a.size; })
+				.sort(function(a,b) { /*console.log(a);*/ return  a.type - b.type; })
+
+				.attr("class", "dot")
+                .attr("transform", function(d) { 
+						var cord = [d.x, d.y];//console.log(cord);
+						return "translate(" + projection(cord).join(",") + ")"
+					                          })
+			    //.attr("transform", function(d) { return "translate(" + d.latitude + "," + d.longitude + ")"; })
+			    .attr("d", d3.svg.symbol()
+                .size(function(d) { return 7*d.size; })
+                .type(function(d) { 
+                       if (d.type==1){
+	                   return "circle";}
+	                   if (d.type==2){
+	                   return "diamond";}
+	                   if (d.type==3){
+	                   return "square";}
+					   if (d.type==4){
+	                   return "cross";}
+	                   else {
+	                   return "triangle-up";}
+				                  } ))
+				.style("fill", function(d)  {
+				return convertToColor((d.color/5));
+				})
+                /*.style("fill", function(d) {
+				       if (d.color==1){
+	                   return "#FEE5D9";}
+	                   if (d.color==2){
+	                   return "#FCAE91";}
+	                   if (d.color==3){
+	                   return "#FB6A4A";}
+					   if (d.color==4){
+	                   return "#DE2D26";}
+	                   else 
+	                   return "#A50F15";
+				                           }
+				       )*/
+                .style("stroke", "black")
+				.attr("fill-opacity", 1)
+				.attr("stroke-opacity", 1)
+                .style("stroke-width", "0.3px")
+				.append("title")
+                .text(function(d) { return "policy: " + d.color + " activity: " + d.type + " number of connections: " + d.size});
+
+     
+});
+});
+
+
+	function click(d) {
+  var x = 0,
+      y = 0,
+      k = 1;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = -centroid[0];
+    y = -centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    centered = null;
+  }
+
+  states.transition()
+      .duration(1000)
+      .attr("transform", "scale(" + k + ")translate(" + x + "," + y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+//converts value to color
+function convertToColor(value) //value from 0..1
+{
+	//badest : #FF 00 00
+	//best : #00 FF 00
+	//two cifers mean 16*16 = 256 values
+	//percentage values reach from 0..1
+	//value < 0.5 --> red
+	//value > 0.5 --> green
+	//alert(value);
+	if(value < 0.5) //convert to Green
+	{
+		var single_val = Math.floor(Math.abs(((value) * 512)-255));
+		single_val = single_val.toString(16);
+		if(single_val.length < 2){ //if only single digit
+			single_val = "0"+single_val;
+		}
+		if(single_val == "100") {alert("something went horribly wroooong! colorvalue:"+value);}
+		return("#" + single_val.toString(16) + "ff" + single_val.toString(16)); 
+	}
+	if(value >= 0.5) //convert to Red
+	{
+		//zalert("value:"+value);
+		var single_val = Math.floor(Math.abs(((value - 0.5) * 512 )));
+		single_val = single_val.toString(16);
+		if(single_val.length < 2){ //if only single digit
+			single_val = "0"+single_val;
+		}
+		return("#ff" + single_val + single_val);
+	}
+}
+
+
+    </script>
+  </body>
+</html>

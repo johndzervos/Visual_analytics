@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Interactive Line Graph</title>
+		<script src="http://d3js.org/d3.v2.js"></script>
+		<!-- 
+			using JQuery for element dimensions
+			This is a small aspect of this example so it can be removed fairly easily if needed.
+		-->
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="sample_data.js"></script>
+		<script src="line-graph.js"></script>
+		<link rel="stylesheet" href="style2.css" type="text/css">
+	</head>
+	<body>
+	
+	<!--<div  style="width:30%">timezone1</div><div style="float:left"><a href="index2.html">timezone 4-6</a></div>-->
+	<div id="div0" style="float: left; width:100%">
+		<div id="div3" style="float: left; width:20%"><a href="index1.html">timezones 1-3</a></div>
+        <div id="div1" style="float: left; width:20%"><a href="index2.html">timezones 4-6</a></div>
+        <div id="div2" style="float: left; width:20%"><a href="index3.html">timezones 7-8</a></div>
+        <div id="div3" style="float: left; width:20%"><a href="index4.html">infected ips</a></div>
+		<div id="div3" style="float: left; width:20%"><a href="index.html">visualization</a></div>
+    </div>
+
+	<div id="graph10" class="aGraph" style="position:relative;width:1200px;height:550px"></div>
+
+	<script>
+		/* 
+		 * If running inside bl.ocks.org we want to resize the iframe to fit both graphs
+		 */
+		 if(parent.document.getElementsByTagName("iframe")[0]) {
+			 parent.document.getElementsByTagName("iframe")[0].setAttribute('style', 'height: 650px !important');
+		 }
+	
+		 /*
+		 * Note how the 'data' object is added to here before rendering to provide decoration information.
+		 * <p>
+		 * This is purposefully done here instead of in data.js as an example of how data would come from a server
+		 * and then have presentation information injected into it (rather than as separate arguments in another object)
+		 * and passed into LineGraph.
+		 *
+		 * Also, CSS can be used to style colors etc, but this is also doable via the 'data' object so that the styling
+		 * of different data points can be done in code which is often more natural for display names, legends, line colors etc
+		 */
+		 // add presentation logic for 'data' object using optional data arguments
+		 //data["displayNames"] = ["2xx","3xx","4xx","5xx"];
+		 //data["colors"] = ["green","orange","red","darkred"];
+		 
+		 // add presentation logic for 'data' object using optional data arguments
+		 
+		 data10["displayNames"] = ["Inf atm","Inf compute","Inf email","Inf file server","Inf loan","Inf multiple","Inf office","Inf teller","Inf web"];
+		 data10["colors"] = ["green","yellow","red","darkred","blue","gray","black","orange","purple"];
+		 data10["scale"] = "linear";
+		 		 
+		 // create graph now that we've added presentation config
+		//var l1 = new LineGraph({containerId: 'graph1', data: data});
+
+		var l10 = new LineGraph({containerId: 'graph10', data: data10});
+		
+	</script>
+
+
+
+	</body>
+</html>

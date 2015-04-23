@@ -1,0 +1,3 @@
+num_ips,healthtime,longitude,latitude,machinefunction,policystatus
+1,2012-02-02 15:45:00,-144.79274,36.03496,compute,5
+1,2012-02-02 15:45:00,-57.392933,23.375921,teller,5

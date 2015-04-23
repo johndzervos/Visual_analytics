@@ -1,0 +1,17 @@
+visual analytics Lab 1
+
+we are thinking of splitting this file into smaller files, based on healthtime, so that we can work with it faster/easier. eeven though this might lead to a significantly large number of files, it wont really be a problem as we can call/iterate through files on the software side. having to load a heavy file every time you run the visualization would compromise on the speed and efficiency of the system. 
+
+through running the data for several hours we can safely conclude the following facts:
+1. the data consisits of over 158 million entries
+2. the data is over the course of 3 days (2/2/2012 to 4/2/2012)
+3. the data has a unique key for every entry for each ip at each time step of 15 minutes. 
+4. the data is too large for Python to store into an array/list/dictionary at one time
+5. each IP address has a unique location in longitude and tatitude coordinates which gives us the possiblity of mapping it geographically
+6. the activity flag in the sample file is between 1 and 5. therefore we can assume that this will be the case in the big data set as well
+7. numconnections holds the count of the connections from each IP adress at each time-step 
+8. looking at the sample files from the dataset, we can conclude that not all IPs are active at every time step.
+
+based on these findings, we propose splitting the file into several smaller files based the fact that the healthtime range is from "2012-02-02 00:00:00" to "2012-02-04 23:45:00". we split each file as per each hour for each day which adds upto 72 files. this might be a verry large file for the data to be parsed effectively so we propose using methods for aggregation of data or sampling of data to make it more managable. 
+
+further work on the data may include setting primary or secondary keys for the major data set and removing duplicate entries between the main file and the extention files (excluding the key). also, we may look into cleaning the data if required. 

@@ -1,0 +1,72 @@
+/*
+* The CSS below is intended for the "global" styles, not specifics per graph such as color of lines
+* which is expected to come from the data itself (even though it can be done via CSS as well if wanted)
+*/
+
+body {
+	font-family: "Helvetica Neue", Helvetica;
+}
+		
+p {
+	clear:both;
+	top: 20px;
+}		
+		
+div.aGraph {
+	clear:both;
+	margin-bottom: 4px;
+}
+
+div.aGraph text {
+	cursor: default;
+}
+
+path {
+	
+}
+
+.hover-line {
+	stroke: #6E7B8B;
+}
+
+.hide {
+	opacity: 0;
+}
+				
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.x.axis line {
+  stroke: #D3D3D3;
+}
+
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+
+.x.axis path {
+  display: none;
+}
+			
+.x.axis text {
+	font-size: 10px;
+}
+
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: #000;
+}
+			
+.y.axis text {
+	font-size: 12px;
+}
+
+.scale-button:not(.selected):hover {
+	text-decoration: underline;
+	cursor: pointer !important;
+}
+
+.date-label {
+	fill: #6E7B8B;
+}
